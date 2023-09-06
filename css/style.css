@@ -2,13 +2,6 @@
     padding: 0;
     margin: 0;
 }
-body{
-    display: flex;
-}
-
-body > div {
-    flex: 1;
-}
 
 navigation{
     width: 100%;
@@ -24,9 +17,4 @@ navigation>div{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.main_window{
-    max-width: 85%;
-    background-color: white;
 }

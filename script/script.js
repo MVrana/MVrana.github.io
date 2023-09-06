@@ -1,7 +1,10 @@
 window.onload = function(){includeHTML()}
 
-var navbarHTML = "<div><a href=\"pages/sidebar.html\">Test link</a></div>"
+function getPathToPagesFolder(){
+    return window.location.href
+}
 
+var navbarHTML = "<div><a href=\""+getPathToPagesFolder()+"\">Hello World</a></div>"
 function includeHTML() {
     var z, i, elmnt, file, xhttp;
     /* Loop through a collection of all HTML elements: */
@@ -11,23 +14,9 @@ function includeHTML() {
         console.log(elmnt.localName)
         if (elmnt.localName == "navigation"){
             if (elmnt.innerHTML == "")
-            {elmnt.innerHTML = navbarHTML}            
+            {
+                elmnt.innerHTML = navbarHTML
+            }            
         }
-        /*search for elements with a certain atrribute:
-        file = elmnt.getAttribute("include-html");
-        if (file) {
-            xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function () {
-                if (this.readyState == 4) {
-                    if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-                    if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
-                    elmnt.removeAttribute("include-html");
-                    includeHTML();
-                }
-            }
-            xhttp.open("GET", file, true);
-            xhttp.send();
-            return;
-        }*/
     }
 }
