@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+}
+
+body > div {
+    flex: 1;
+}
+
+navigation{
+    width: 100%;
+    height: 5rem;
+    background-color: lightgray;
+    display: flex;
+}
+navigation>div{
+    max-width: 20%;
+    margin: 0.5em;
+    flex: 1;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_window{
+    max-width: 85%;
+    background-color: white;
+}
